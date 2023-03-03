@@ -100,6 +100,7 @@ if __name__ == "__main__":
     app = QApplication(sys.argv)
     UIWindow = UI()
     app.exec_()
+    #test
 
     # app = QtWidgets.QApplication(sys.argv)
     # MainWindow = QtWidgets.QMainWindow()
