@@ -110,17 +110,16 @@ class UI(QMainWindow):
             print("Activity or Description missing data")
             return
         else:
-            # Valid Inputs for All
+            # All inputs are valid
             print("{:*^30s}".format("VALID INPUTS"))
-            # print("Activity: ", activity)
-            # print("Description: ", description)
-            # print("Time: ", time)
 
+            # Appending information to previous event dictionaries
             self.userInfo["Activity"].append(activity)
             self.userInfo["Description"].append(description)
             self.userInfo["Time"].append(time)
             self.mergeDictionary(self.daysInfo, daysDict)
 
+            # Increment amount of events to be added
             self.eventsAdded += 1
 
             print("Amount of Events: ", self.eventsAdded)
@@ -147,8 +146,8 @@ class UI(QMainWindow):
         daysDict["Saturday"] = self.saturdayBox.isChecked()
         daysDict["Sunday"] = self.sundayBox.isChecked()
         
-        # No validation. Will always run
-        # validation done in submitClicked or other
+        # No validation... Will always run
+        # Validation done in submitClicked or other
         return daysDict
         
 
