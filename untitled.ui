@@ -6,175 +6,42 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>599</height>
+    <width>880</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(44, 49, 60);</string>
+   <string notr="true"/>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QPushButton" name="submitButton">
     <property name="geometry">
      <rect>
-      <x>360</x>
-      <y>400</y>
-      <width>75</width>
-      <height>24</height>
+      <x>390</x>
+      <y>370</y>
+      <width>101</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);</string>
+     <string notr="true">color: rgb(255, 255, 255);
+background-color: rgb(85, 170, 255);
+border-radius:4px;</string>
     </property>
     <property name="text">
      <string>Submit</string>
     </property>
    </widget>
-   <widget class="QLineEdit" name="activityLineEdit">
-    <property name="geometry">
-     <rect>
-      <x>120</x>
-      <y>140</y>
-      <width>113</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);
-border-radius:4px;</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="descriptionLineEdit">
-    <property name="geometry">
-     <rect>
-      <x>120</x>
-      <y>170</y>
-      <width>113</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);
-border-radius:4px;</string>
-    </property>
-   </widget>
-   <widget class="QLineEdit" name="timeLineEdit">
-    <property name="geometry">
-     <rect>
-      <x>122</x>
-      <y>200</y>
-      <width>111</width>
-      <height>22</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 255);
-border-radius:4px;</string>
-    </property>
-   </widget>
-   <widget class="QListWidget" name="listWidget">
-    <property name="geometry">
-     <rect>
-      <x>510</x>
-      <y>120</y>
-      <width>256</width>
-      <height>192</height>
-     </rect>
-    </property>
-    <item>
-     <property name="text">
-      <string>Monday</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Tuesday</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Wednesday</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Thursday</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Friday</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Saturday</string>
-     </property>
-    </item>
-    <item>
-     <property name="text">
-      <string>Sunday</string>
-     </property>
-    </item>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>70</x>
-      <y>140</y>
-      <width>49</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);</string>
-    </property>
-    <property name="text">
-     <string>Activity</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_2">
-    <property name="geometry">
-     <rect>
-      <x>50</x>
-      <y>170</y>
-      <width>71</width>
-      <height>20</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);</string>
-    </property>
-    <property name="text">
-     <string>Description</string>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_3">
-    <property name="geometry">
-     <rect>
-      <x>80</x>
-      <y>200</y>
-      <width>41</width>
-      <height>21</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">color: rgb(255, 255, 255);</string>
-    </property>
-    <property name="text">
-     <string>Time</string>
-    </property>
-   </widget>
    <widget class="QWidget" name="verticalLayoutWidget">
     <property name="geometry">
      <rect>
-      <x>330</x>
+      <x>600</x>
       <y>120</y>
-      <width>160</width>
-      <height>201</height>
+      <width>181</width>
+      <height>211</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -184,7 +51,7 @@ border-radius:4px;</string>
      <item>
       <widget class="QCheckBox" name="mondayBox">
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);</string>
+        <string notr="true">color: rgb(131, 131, 131);</string>
        </property>
        <property name="text">
         <string>Monday</string>
@@ -194,7 +61,7 @@ border-radius:4px;</string>
      <item>
       <widget class="QCheckBox" name="tuesdayBox">
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);</string>
+        <string notr="true">color: rgb(131, 131, 131);</string>
        </property>
        <property name="text">
         <string>Tuesday</string>
@@ -204,7 +71,7 @@ border-radius:4px;</string>
      <item>
       <widget class="QCheckBox" name="wednesdayBox">
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);</string>
+        <string notr="true">color: rgb(131, 131, 131);</string>
        </property>
        <property name="text">
         <string>Wednesday</string>
@@ -214,7 +81,7 @@ border-radius:4px;</string>
      <item>
       <widget class="QCheckBox" name="thursdayBox">
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);</string>
+        <string notr="true">color: rgb(131, 131, 131);</string>
        </property>
        <property name="text">
         <string>Thursday</string>
@@ -224,7 +91,7 @@ border-radius:4px;</string>
      <item>
       <widget class="QCheckBox" name="fridayBox">
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);</string>
+        <string notr="true">color: rgb(131, 131, 131);</string>
        </property>
        <property name="text">
         <string>Friday</string>
@@ -234,7 +101,7 @@ border-radius:4px;</string>
      <item>
       <widget class="QCheckBox" name="saturdayBox">
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);</string>
+        <string notr="true">color: rgb(131, 131, 131);</string>
        </property>
        <property name="text">
         <string>Saturday</string>
@@ -244,7 +111,7 @@ border-radius:4px;</string>
      <item>
       <widget class="QCheckBox" name="sundayBox">
        <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);</string>
+        <string notr="true">color: rgb(131, 131, 131);</string>
        </property>
        <property name="text">
         <string>Sunday</string>
@@ -253,18 +120,125 @@ border-radius:4px;</string>
      </item>
     </layout>
    </widget>
+   <widget class="QWidget" name="gridLayoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>120</y>
+      <width>251</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <layout class="QGridLayout" name="gridLayout">
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="timeLineEdit">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+border-radius:4px;
+border:2px solid gray;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="styleSheet">
+        <string notr="true">color: rgb(131, 131, 131);</string>
+       </property>
+       <property name="text">
+        <string>Time</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
+       <property name="styleSheet">
+        <string notr="true">color: rgb(131, 131, 131);</string>
+       </property>
+       <property name="text">
+        <string>Activity</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="activityLineEdit">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+border-radius:4px;
+border:2px solid gray;</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="styleSheet">
+        <string notr="true">color: rgb(131, 131, 131);</string>
+       </property>
+       <property name="text">
+        <string>Description</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="descriptionLineEdit">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(255, 255, 255);
+border-radius:4px;
+border:2px solid gray;</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QLabel" name="backgroundImageLabel">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>871</width>
+      <height>571</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="tester.qrc">:/background/signin.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <zorder>backgroundImageLabel</zorder>
+   <zorder>submitButton</zorder>
+   <zorder>verticalLayoutWidget</zorder>
+   <zorder>gridLayoutWidget</zorder>
   </widget>
+  <widget class="QStatusBar" name="statusbar"/>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>800</width>
+     <width>880</width>
      <height>22</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuhello">
+    <property name="title">
+     <string>hello</string>
+    </property>
+   </widget>
+   <addaction name="menuhello"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources>
   <include location="tester.qrc"/>

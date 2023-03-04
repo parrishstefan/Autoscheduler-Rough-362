@@ -9,7 +9,9 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets, uic
-from PyQt5.QtWidgets import QMainWindow, QApplication, QPushButton, QListView 
+from PyQt5.QtWidgets import QMainWindow, QApplication, QPushButton, QListView
+
+import anothertest
 
 
 # class Ui_MainWindow(object):
@@ -69,6 +71,9 @@ class UI(QMainWindow):
         #### LOAD UI FILE ####
         uic.loadUi("untitled.ui", self)
 
+        #### CUSTOM UI EDITS ####
+        self.backgroundImageLabel.setStyleSheet("background-image: url(:/background/signin.png);")
+
         #### ACTIONS ####
 
         # Submit button
@@ -78,6 +83,7 @@ class UI(QMainWindow):
         #self.mondayBox.setChecked(True)
 
         #### SHOW APP ####
+        self.setFixedSize(880,600)
         self.show()
     
     def submitClicked(self):
