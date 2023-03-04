@@ -51,7 +51,17 @@ from PyQt5.QtWidgets import QMainWindow, QApplication, QPushButton, QListView
 
 class UI(QMainWindow):
 
-    userInfo = {"Activity":[],"Description":[],"Time":[]};
+    eventsAdded = 0
+    userInfo = {"Activity": [], "Description": [],"Time": []}
+    daysInfo = {
+            "Monday": [], 
+            "Tuesday": [], 
+            "Wednesday": [], 
+            "Thursday": [], 
+            "Friday": [], 
+            "Saturday": [], 
+            "Sunday": []
+            }
 
     def __init__(self):
         super(UI, self).__init__()
@@ -71,6 +81,7 @@ class UI(QMainWindow):
         self.show()
     
     def submitClicked(self):
+        daysDict = {}
         activity = self.activityLineEdit.text()
         description = self.descriptionLineEdit.text()
         time = self.timeLineEdit.text()
@@ -84,7 +95,14 @@ class UI(QMainWindow):
             print("digit")
         
         # Checks to see what checkboxes are selected for days of the week
-        self.daysChecked()
+        #self.daysInfo.append(self.daysChecked())
+        daysDict = self.daysChecked()
+
+        # Checks to see if any of the days of the week boxes are checked
+        if True not in daysDict.values():
+            # Show popup for error (missing days of the week input)
+            print("Days of the week missing checked")
+            return
 
         # Checks to see if activity and description text fields have values
         if not activity or not description:
@@ -94,16 +112,23 @@ class UI(QMainWindow):
         else:
             # Valid Inputs for All
             print("{:*^30s}".format("VALID INPUTS"))
-            print("Activity: ", activity)
-            print("Description: ", description)
-            print("Time: ", time)
+            # print("Activity: ", activity)
+            # print("Description: ", description)
+            # print("Time: ", time)
 
             self.userInfo["Activity"].append(activity)
             self.userInfo["Description"].append(description)
             self.userInfo["Time"].append(time)
+            self.mergeDictionary(self.daysInfo, daysDict)
+
+            self.eventsAdded += 1
+
+            print("Amount of Events: ", self.eventsAdded)
+            print("UserInfo: ", self.userInfo)
+            print("DaysInfo: ", self.daysInfo)
     
     def daysChecked(self):
-        # Could be global idk yet
+        # Temp placeholder for days of the week selected
         daysDict = {
             "Monday": False, 
             "Tuesday": False, 
@@ -122,8 +147,15 @@ class UI(QMainWindow):
         daysDict["Saturday"] = self.saturdayBox.isChecked()
         daysDict["Sunday"] = self.sundayBox.isChecked()
         
-        print(daysDict)
+        # No validation. Will always run
+        # validation done in submitClicked or other
         return daysDict
+        
+
+    def mergeDictionary(self, d1, d2):
+        for i in d1:
+            d1[i].append(d2[i])
+
         
 
 if __name__ == "__main__":
