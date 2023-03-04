@@ -138,6 +138,7 @@ class UI(QMainWindow):
             "Sunday": False
             }
 
+        # Returns boolean if each day is checked (True = checked, False = unchecked)
         daysDict["Monday"] = self.mondayBox.isChecked()
         daysDict["Tuesday"] = self.tuesdayBox.isChecked()
         daysDict["Wednesday"] = self.wednesdayBox.isChecked()
