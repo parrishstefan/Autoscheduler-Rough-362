@@ -57,7 +57,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox">
+   <widget class="QCheckBox" name="mondayBox">
     <property name="geometry">
      <rect>
       <x>360</x>
@@ -115,7 +115,7 @@
      </property>
     </item>
    </widget>
-   <widget class="QCheckBox" name="checkBox_2">
+   <widget class="QCheckBox" name="tuesdayBox">
     <property name="geometry">
      <rect>
       <x>360</x>
@@ -128,7 +128,7 @@
      <string>Tuesday</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox_3">
+   <widget class="QCheckBox" name="thursdayBox">
     <property name="geometry">
      <rect>
       <x>360</x>
@@ -141,7 +141,7 @@
      <string>Thursday</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox_4">
+   <widget class="QCheckBox" name="wednesdayBox">
     <property name="geometry">
      <rect>
       <x>360</x>
@@ -154,7 +154,7 @@
      <string>Wednesday</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox_5">
+   <widget class="QCheckBox" name="fridayBox">
     <property name="geometry">
      <rect>
       <x>360</x>
@@ -167,7 +167,7 @@
      <string>Friday</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox_6">
+   <widget class="QCheckBox" name="sundayBox">
     <property name="geometry">
      <rect>
       <x>360</x>
@@ -180,7 +180,7 @@
      <string>Sunday</string>
     </property>
    </widget>
-   <widget class="QCheckBox" name="checkBox_7">
+   <widget class="QCheckBox" name="saturdayBox">
     <property name="geometry">
      <rect>
       <x>360</x>

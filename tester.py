@@ -56,29 +56,37 @@ class UI(QMainWindow):
     def __init__(self):
         super(UI, self).__init__()
 
-        # Load UI File
+        #### LOAD UI FILE ####
         uic.loadUi("untitled.ui", self)
 
-        # Actions
+        #### ACTIONS ####
+
+        # Submit button
         self.submitButton.clicked.connect(self.submitClicked)
 
-        # Show App
+        # Days of the week checkboxes
+        #self.mondayBox.setChecked(True)
+
+        #### SHOW APP ####
         self.show()
     
     def submitClicked(self):
         activity = self.activityLineEdit.text()
         description = self.descriptionLineEdit.text()
         time = self.timeLineEdit.text()
-        print("User - ", self.userInfo)
 
-
+        # Checks to see if the input is a number
         if not time.isdigit():
             # show popup for error (time is not a number)
             print("Error not a digit")
             return
         else:
             print("digit")
+        
+        # Checks to see what checkboxes are selected for days of the week
+        self.daysChecked()
 
+        # Checks to see if activity and description text fields have values
         if not activity or not description:
             # show popup for error (missing data)
             print("Activity or Description missing data")
@@ -93,6 +101,29 @@ class UI(QMainWindow):
             self.userInfo["Activity"].append(activity)
             self.userInfo["Description"].append(description)
             self.userInfo["Time"].append(time)
+    
+    def daysChecked(self):
+        # Could be global idk yet
+        daysDict = {
+            "Monday": False, 
+            "Tuesday": False, 
+            "Wednesday": False, 
+            "Thursday": False, 
+            "Friday": False, 
+            "Saturday": False, 
+            "Sunday": False
+            }
+
+        daysDict["Monday"] = self.mondayBox.isChecked()
+        daysDict["Tuesday"] = self.tuesdayBox.isChecked()
+        daysDict["Wednesday"] = self.wednesdayBox.isChecked()
+        daysDict["Thursday"] = self.thursdayBox.isChecked()
+        daysDict["Friday"] = self.fridayBox.isChecked()
+        daysDict["Saturday"] = self.saturdayBox.isChecked()
+        daysDict["Sunday"] = self.sundayBox.isChecked()
+        
+        print(daysDict)
+        return daysDict
         
 
 if __name__ == "__main__":
